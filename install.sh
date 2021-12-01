@@ -5,16 +5,16 @@ GREY='\033[0;37m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo "Instalando dependecias..."
+echo -e "${GREY}Instalando dependecias...${NC}"
 sleep 1
 echo -ne '▮▮▮▮                     (33%)\r' | lolcat 2>/dev/null
 sleep 1
 sudo apt install figlet lolcat curl -y &> /dev/null
 sudo apt install figlet toilet python curl ruby -y &> /dev/null
-sudo gem install lolcat &> /dev/null
-sudo apt install python3-pip -y &> /dev/null
 echo -ne '▮▮▮▮▮▮▮▮▮▮▮▮▮             (66%)\r' | lolcat 2>/dev/null
 sleep 1
+sudo gem install lolcat &> /dev/null
+sudo apt install python3-pip -y &> /dev/null
 echo -ne '▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮   (100% completado)\r' | lolcat 2>/dev/null
 echo -ne '\n'
 figlet -f slant TALKER-N1GHT | lolcat
